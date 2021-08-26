@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <template id="collapsibleTmpl">
+        <style>
+            .collapsible-panel {
+                border: black dashed 1px
+            }
+
+            header {
+                background: blue;
+                color: white;
+                cursor: pointer;
+                padding: 2px;
+            }
+        </style>
+        <div class="collapsible-panel">
+            <header id="header">
+                header will be here
+            </header>
+            <div id="content">
+                content will be here
+            </div>
+        </div>
+    </template>
+
+    <div id="shell"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

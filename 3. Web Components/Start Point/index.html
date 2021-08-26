@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <template id="collapsibleTmpl">
+        <style>
+            .collapsible-panel {
+                border: black dashed 1px
+            }
+
+            header {
+                background: blue;
+                color: white;
+                cursor: pointer;
+                padding: 2px;
+            }
+        </style>
+        <div class="collapsible-panel">
+            <header id="header">
+            </header>
+            <div id="content">
+                <slot></slot>
+            </div>
+        </div>
+    </template>
+
+    <section>
+        <collapsible-panel data-collapse-header="Collapse me!">
+            <ul>
+                <li>Web Components are awesome!</li>
+                <li>Utilizing Shadow DOM</li>
+            </ul>
+        </collapsible-panel>
+    </section>
+
+    <script type="module">
+        import { defineCollapsible } from './scripts.js';
+
+        defineCollapsible();
+    </script>
+</body>
+</html>
